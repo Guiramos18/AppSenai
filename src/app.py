@@ -1,6 +1,5 @@
 import flet
-from flet import ThemeMode, Text, TextField, OutlinedButton, Column, CrossAxisAlignment, ElevatedButton, TextButton, \
-    Container, Colors
+from flet import ThemeMode, Text, TextField, OutlinedButton, Column, CrossAxisAlignment, ElevatedButton, TextButton, Container, Colors
 from datetime import datetime
 from flet.controls import page
 from flet.controls.border_radius import horizontal
@@ -19,11 +18,9 @@ def main(page: flet.Page):
         text.value = f"Bom dia {input_nome.value} {input_nome2.value}"
         page.update()
 
-
     def impar_par():
 
         num_convertido = int(numero1.value)
-
 
         if num_convertido % 2 == 0:
             texto = 'Par'
@@ -31,13 +28,12 @@ def main(page: flet.Page):
         else:
             texto = 'Impar'
 
-
         text2.value = f"Seu numero é {texto}"
         page.update()
 
     def verificar_idade():
         idade_convertida = int(data_nasc.value)
-        sua_idade= datetime.now().year - idade_convertida
+        sua_idade = datetime.now().year - idade_convertida
         if sua_idade >= 18:
             texto = 'maior de idade'
 
@@ -46,9 +42,6 @@ def main(page: flet.Page):
 
         text3.value = f"Você é {texto}"
         page.update()
-
-
-
 
     # Componentes
     text = Text("")
@@ -62,7 +55,6 @@ def main(page: flet.Page):
     btn_salvar = OutlinedButton("Salvar", on_click=salvar_nome)
     btn_impar_par = ElevatedButton("Impar ou par", on_click=impar_par)
     btn_idade = TextButton("Verificar idade", on_click=verificar_idade)
-
 
     # Construção da tela
     page.add(
@@ -121,7 +113,6 @@ def main(page: flet.Page):
             horizontal_alignment=CrossAxisAlignment.CENTER
         )
     )
-
 
 
 flet.run(main)
