@@ -209,9 +209,9 @@ def main(page: flet.Page):
 
     # Componentes
     text_nome = Text(weight=FontWeight.BOLD, size=24)
-    text_preco = TextField()
-    text_cor = TextField()
-    text_idade = TextField()
+    text_preco = Text()
+    text_cor = Text()
+    text_idade = Text()
     input_nome = TextField(label="Nome", hint_text="Digite o nome do seu Tamagotchi")
     input_preco = TextField(label="Preço", hint_text="Digite o preço do seu Tamagotchi")
     input_cor = TextField(label="Cor", hint_text="Digite a cor do seu Tamagotchi")
